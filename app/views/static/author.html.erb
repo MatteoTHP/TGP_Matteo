@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <body>
+
+        <h3>Voici l'auteur numero: <%= "#{params[:id]}" %> </h3>
+        <p> </p>
+        <p></p>
+        <p> </p>
+        <p> </p>
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+        <div class="card-header"><%=  Author.find(params[:id]).first_name%> <%=  Author.find(params[:id]).last_name%></div>
+        <div class="card-body">
+            <h5 class="card-title"><%= Author.find(params[:id]).email %></h5>
+            <p class="card-text"><%= Author.find(params[:id]).age %> ans</p>
+        </div>
+        </div>
+    </body>
+</html>

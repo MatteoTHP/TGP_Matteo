@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <div class="card text-center">
+    
+            <h1>Bienvenue Visiteur !</h1>
+        </div>
+        
+
+        <p>Voici la liste des gossips : </p>
+
+
+        <% Gossip.all.each do |gossip| %>
+            
+            
+            
+            <div class="card text-center">
+            <div class="card-header">
+                
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><%= link_to "#{gossip.title}", "#{gossip.id}"%></h5>
+                <p class="card-text">by <%= Author.find(gossip.author_id).first_name %><br></p>
+                
+            </div>
+           
+            </div>       
+        <% end %>
+    
+  </body>
+</html>
+
+   
+
+   
+    
+
+</html>
